@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
+
   let componentMounted = true;
   useEffect(() => {
     const getProducts = async () => {
@@ -20,27 +22,33 @@ const Products = () => {
     };
     getProducts();
   }, []);
+
   const Loading = () => {
     return <>Loading....</>;
   };
+
   const filterProduct = (cat) => {
     const updatedList = data.filter((x) =>x.category === cat);
     setFilter(updatedList)
   }
+
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons d-flex justify-content-center mn-5 pb-5">
           <buttons className="btn btn-outline-dark me-3" onClick={()=>
         setFilter(data)}>All</buttons>
+
           <buttons className="btn btn-outline-dark me-3"onClick={()=>
-        filterProduct("farmazon tools")}>
-            Farmazon tools
+        filterProduct("men's clothing")}>
+           Men's clothing
           </buttons>
+
           <buttons className="btn btn-outline-dark me-3"onClick={()=>
         filterProduct("farmazon feeds")}>
             Farmazon feeds
           </buttons>
+          
           <buttons className="btn btn-outline-dark me-3"onClick={()=>
         filterProduct("farmazon fertilizers")}>
             Farmazon fertilizers
