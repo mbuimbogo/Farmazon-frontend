@@ -56,18 +56,20 @@ const Products = () => {
 						All
 					</buttons>
 
-					<buttons
-						className="btn btn-outline-dark me-3"
-						onClick={() => filterProduct("tools")}
-					>
-						Farmazon tools
-					</buttons>
+					
 
 					<buttons
 						className="btn btn-outline-dark me-3"
 						onClick={() => filterProduct("feeds")}
 					>
 						Farmazon feeds
+					</buttons>
+
+                    <buttons
+						className="btn btn-outline-dark me-3"
+						onClick={() => filterProduct("tools")}
+					>
+						Farmazon tools
 					</buttons>
 
 					<buttons
