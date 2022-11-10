@@ -6,23 +6,6 @@ const Products = () => {
 	const [loading, setLoading] = useState(false);
 
 	let componentMounted = true;
-	//   useEffect(() => {
-	//     const getProducts = async () => {
-	//       setLoading(true);
-
-	//       const response = await fetch("http://localhost:8000/products");
-	//       if (componentMounted) {
-	//         setData(await response.clone().json());
-	//         setFilter(await response.json());
-	//         setLoading(false);
-	//         console.log(filter);
-	//       }
-	//       return () => {
-	//         componentMounted = false;
-	//       };
-	//     };
-	//     getProducts();
-	//   }, []);
 
 	useEffect(() => {
 		setLoading(true);
@@ -58,16 +41,16 @@ const Products = () => {
 
 					<buttons
 						className="btn btn-outline-dark me-3"
-						onClick={() => filterProduct("tools")}
+						onClick={() => filterProduct("feeds")}
 					>
-						Farmazon tools
+						Farmazon feeds
 					</buttons>
 
 					<buttons
 						className="btn btn-outline-dark me-3"
-						onClick={() => filterProduct("feeds")}
+						onClick={() => filterProduct("tools")}
 					>
-						Farmazon feeds
+						Farmazon tools
 					</buttons>
 
 					<buttons
@@ -84,7 +67,7 @@ const Products = () => {
 								<div className="card h-100 text-center p-4" key={product.id}>
 									<img
 										src={product.image_url}
-										class="card-img-top"
+										className="card-img-top"
 										alt={product.name}
 										height="250px"
 									/>
@@ -93,9 +76,9 @@ const Products = () => {
 											{product.name.substring(0, 12)}
 										</h5>
 										<p className="card-text lead fw-bold">${product.price}</p>
-										<a href="#" class="btn btn-outline-dark">
+										<button className="btn btn-outline-dark">
 											Purchase Now
-										</a>
+										</button>
 									</div>
 								</div>
 							</div>
