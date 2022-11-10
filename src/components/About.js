@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="about">
       <div className="aboutTop">
-        <img src="https://images.pexels.com/photos/207110/pexels-photo-207110.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <img src="https://images.unsplash.com/photo-1592079927431-3f8ced0dacc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFncmljdWx0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
       </div>
       <div className="aboutBottom">
         <h1>ABOUT US</h1>
